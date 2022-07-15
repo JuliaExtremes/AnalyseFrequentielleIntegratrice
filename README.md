@@ -34,3 +34,47 @@ Par la suite, vous pourrez lancer Jupyter à l'aide des commandes suivantes :
 using IJulia
 notebook()
 ```
+
+## Installation des librairies nécessaires
+
+Après avoir lancé Julia, exécutez les commandes suivantes pour installer les librairies nécessaires.
+
+```julia
+using Pkg
+
+# Ajout des librairie pour les données
+Pkg.add(["CSV", "DataFrames", "NetCDF"])
+
+# Ajout des librairies de statistique
+Pkg.add(["Distributions", "Extremes", "Mamba", "StatsBase"])
+Pkg.add(url = "https://github.com/JuliaExtremes/ErrorsInVariablesExtremes.jl")
+
+# Ajout de la librairie d'affichage
+Pkg.add("Gadfly")
+
+# Ajout de librairies utiles
+Pkg.add(["ProgressMeter", "Serialization"])
+```
+
+
+## Cloner le répertoire GitHub
+
+### Option 1
+
+Dans un terminal, exécuter la commande ```git clone https://github.com/JuliaExtremes/AnalyseFrequentielleIntegratrice.git``` dans le répertoire de votre choix. Ceci vous permettra d'obtenir une copie à jour du répertoire. 
+
+### Option 2
+
+Sur la page d'accueil, cliquez sur le bouton vert intitulé `Code`. Vous pourrez alors choisir vos options de téléchargement.
+
+
+## Ouvrir un fichier .ipynb
+
+1. Lancez Julia
+2. Exécutez les commandes 
+```julia
+using IJulia
+notebook()
+```
+3. Recherchez dans vos fichiers locaux le calepin Jupyter avec l'extension .ipynb.
+
