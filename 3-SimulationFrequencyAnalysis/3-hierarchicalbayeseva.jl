@@ -181,7 +181,7 @@ function fitbayes(model::HierarchicalBayesModel;
     #println("    ", mean(acc_y[:, warmup:niter]))
     println("")
     
-    return HierarchicalBayesEVAStd(model, res, Extremes.transform.(fm), scale, offset)
+    return HierarchicalBayesEVAStd(model, res, fm, scale, offset)
 end
 
 function standardize_values(values::Vector{Vector{Float64}})
